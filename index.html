@@ -20,7 +20,32 @@
   </style>
 </head>
 <body>
- <h1>Coming Soon</h1>
-<p>We’re working on something special — stay tuned.</p>
+  <div class="container">
+    <h1 class="fade-in">Coming Soon</h1>
+    <p class="fade-in delay">We’re working on something special — stay tuned.</p>
+  </div>
+
+  <style>
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+    }
+    .delay {
+      animation-delay: 1s;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    .container {
+      text-align: center;
+      animation: pulse 5s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.85; }
+    }
+  </style>
 </body>
 </html>
